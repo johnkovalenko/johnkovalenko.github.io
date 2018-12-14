@@ -1,0 +1,160 @@
+* {margin: 0; padding: 0;}
+
+html, body {
+    /* background-color: #0000ff; */
+    background-color: #ffffff;
+    height: 100%;
+}
+
+/* CONTAINER */
+div.container {
+    margin: 0px auto;
+    min-height: 100%;
+    max-width: 70%;
+}
+
+/* HEADER */
+div.header {
+    margin: 0px auto;
+    padding-top: 15px; /* Don`t use margin because of sticky footer. */
+    padding-bottom: 15px; /* Move border-bottom of header. */
+    height: auto;
+    max-width: 100%;
+    /* background-color: #004388; */
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: #000000;
+    border-bottom: solid 1px #000000;
+    border-radius: 0px;
+    overflow: hidden; /* Divide header and main block. */    
+}
+
+.header p {
+    padding: 20px 20px;
+    text-align: right;
+}
+
+/* MAIN */
+div.main {
+    margin: 0px auto;
+    padding: 10px 0px 0px 0px;
+    min-height: 100%;
+    max-width: 100%;
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+.main p.name {
+    width: 100%;
+    font-size: 6vw;
+    font-weight: 700;
+    text-align: right;
+}
+.main .contacts {
+    font-size: 1vw;
+    font-weight: 300;
+    font-align: left;
+}
+.main span.tag {
+    padding: 0px 5px;
+    font-size: 1.4vw;
+    font-weight: 700;
+    text-align: left;
+    text-transform: uppercase;
+    color: #ffffff;
+    background-color: #000000;
+}
+.main a.cv_link,
+.main p.info{
+    font-size: 2vw;
+    font-weight: 400;
+    text-align: left;
+    text-transform: uppercase;
+}
+.main p.info {padding-top: 20px;}
+
+/* LINKS */
+.main a:visited,
+.main a:link,
+.main a:hover,
+.footer a:visited,
+.footer a:link,
+.footer a:hover {
+    padding: 3px 4px;
+    width: 100px;
+    font-weight: 400;
+    color: #000000;
+    text-decoration: none;
+    transition: 0.4s;
+    outline: 0;
+}
+
+.header a:hover,
+.main a:hover,
+.footer a:hover {
+    background-color: #000000;
+    color: #ffffff;
+    }
+
+/* SOCIAL */
+div.social {
+    height: auto;
+    max-width: 100%;
+}
+
+.social a {
+    display: block;
+    float: right;
+}
+/* FONT AWESOME */
+.social a:hover {
+    background-color: transparent;
+    /* Avoid colored background */
+}
+.fab {
+    padding: 0.3vw 2vw;
+    font-size: 5vw;
+    background-color: #ffffff;
+    color: #d3d3d3;
+}
+.fa-linkedin:hover {
+    color: #007bb6;
+}
+.fa-github:hover {
+    color: #000000;
+}
+.fa-hackerrank:hover {
+    color: #32CD32;
+}
+.fa-kaggle:hover {
+    color: #87CEFA;
+}
+.fa-twitter:hover {
+    color: #00aced;
+}
+.fa-facebook:hover {
+    color: #3b5998;
+}
+
+/* CLR */
+.clr {
+    height: 105px;
+}
+
+/* FOOTER */
+div.footer{
+    margin-top: -100px;
+    margin-left: auto;
+    margin-right: auto;
+    clear: both;
+    height: 100px;
+    max-width: 700px;
+    text-transform: uppercase;
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 300;
+    font-size: 28px;
+    color: #000000;
+    }
