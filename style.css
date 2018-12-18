@@ -3,14 +3,14 @@
 html, body {
     /* background-color: #0000ff; */
     background-color: #000000;
-    height: 100%;
+    height: 100vh;
 }
 
 /* CONTAINER */
 div.container {
-    margin: 0px auto;
-    min-height: 100%;
+    min-height: 100vh;
     max-width: 100vw;
+    margin: 0px auto;
 }
 
 /* HEADER */
@@ -21,17 +21,20 @@ div.header {
 
 /* SOCIAL */
 div.social {
-    padding-top: 20vh;
     display: flex;
     justify-content: space-around;
-    height: 18vh;
-    min-width: 100vw;
-    border-bottom: solid 1px white;
+    font-size: 14vw;  /* 5 social -> 100vh/5. */
+    min-height: 3ex; /* 1ex = height of font-size. */
+    min-width: 100%;
+    overflow: hidden;
 }
 
-.social a {
+.social a:link,
+.social a:visited,
+.social a:hover,
+.social a:active {
     display: block;
-    overflow: hidden;
+    outline: 0px;
 }
 
 /* FONT AWESOME */
@@ -40,10 +43,9 @@ div.social {
     /* Avoid colored background */
 }
 .fab {
-    padding: 0vw 1vw;
-    font-size: 11vw;
+    padding-top: 14vh;
     background-color: #000000;
-    color: #d3d3d3;
+    color: #ffffff;
 }
 .fa-linkedin:hover {
     color: #007bb6;
@@ -60,64 +62,77 @@ div.social {
 .fa-twitter:hover {
     color: #00aced;
 }
-.fa-facebook:hover {
-    color: #3b5998;
-}
 
 /* NAME */
 .name p {
-    padding-top: 5vh;
+    height: 21vh;
+    padding-top: 4vh;
     min-width: 100vw;
-    font-size: 5vw;
+    font-size: 8vw;
     font-family: 'Josefin Slab', serif;
-    font-weight: 300;
+    font-weight: 700;
     text-transform: uppercase;
     color: #ffffff;
     text-align: center;
+    border-top: solid 1px #ffffff;
 }
 
 /* CV, EDU */
-div.cv,
-div.edu {
-    padding-top: 0.5vh;
+div.cv {
+    height: 15vh;
     min-width: 100vw;
 }
-.cv p,
-.edu p {
+.cv p
+/* .edu p */ {
     margin: 0px auto;
-    padding: 1.8vh 0vh 0.3vh;
-    width: 50%;
-    font-size: 1.5vw;
-    font-family: 'Nunito Sans', sans-serif;
-    font-weight: 900;
-    text-transform: uppercase;
-    color: #ffffff;
     text-align: center;
-    border-bottom: solid 1px #ffffff;
 }
-.edu p {
+.cv p {
+    width: 100%;
+}
+/* .edu p {
+    width: 100%;
+    height: auto;
     font-family: 'Nunito', sans-serif;    
-    font-size: 1.5vw;
+    font-size: 2.5vw;
     font-weight: 300;
-}
+} */
 .cv a:link,
 .cv a:visited,
 .cv a:hover,
 .cv a:active {
     text-decoration: none;
-    color: #ffffff;
+    font-size: 6vw;
+    text-transform: uppercase;
+    font-weight: 300;
     outline: 0px;
+    border-bottom: solid 1px #ffffff;
+}
+a.cv_link {
+    font-family: 'Josefin Slab', serif;
+    color: #ffffff;
+}
+a.cv_link:hover {
+    color: #FFDC00;
+}
+
+/* hide edu section. */
+div.edu * {
+    height: 0px; 
+    color: #000000;
+    margin: 0px;
+    padding: 0px;
 }
 
 /* CONTACTS */
 .contacts p {
     padding-top: 1.8vh;
     min-width: 100vw;
-    font-size: 1.5vw;
+    font-size: 3vw;
     font-family: 'Nunito Sans', sans-serif;
     font-weight: 900;
-    text-transform: uppercase;
     color: #ffffff;
+    text-transform: uppercase;
     text-align: center;
 }
 .contacts a:link,
@@ -125,13 +140,7 @@ div.edu {
 .contacts a:hover,
 .contacts a:active {
     text-decoration: none;
-    color: #ffffff;
     outline: 0px;
-}
-
-.contacts a:hover,
-.cv a:hover {
-    color: #ff00ff;
 }
 
 /* CLR */
